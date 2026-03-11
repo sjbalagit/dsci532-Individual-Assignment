@@ -71,4 +71,4 @@ The app will start and typically open at `http://127.0.0.1:XXXX` (the port will 
 
 ## Attribution
 
-Generative AI tools (Google Gemini, OpenAI ChatGPT, and GitHub Copilot) were used to assist with code generation and documentation drafting. All generated content was reviewed and edited by the author to ensure accuracy and quality.
+Generative AI tools (Anthropic Claude, OpenAI ChatGPT, and GitHub Copilot) were used to assist with code generation and documentation drafting. All generated content was reviewed and edited by the author to ensure accuracy and quality.
