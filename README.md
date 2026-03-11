@@ -4,22 +4,19 @@
 
 The application is a 'Shiny for R' interactive dashboard that visualizes California housing data from 1990. The data is block level census data. Link to the group project: [DSCI-532_2026_5_california_housing](https://github.com/UBC-MDS/DSCI-532_2026_5_california_housing)
 
+Link to deployment: [Dashboard](https://sjbalagit-dsci532-individual-assignment.share.connect.posit.cloud)
+
 ## Installation
 
 ### Requirements
 
-- R 3.6+
-- The following R packages (see `requirements_r.txt`):
-  - shiny
-  - ggplot2
-  - dplyr
-  - tidyr
-  - plotly
-  - bslib
+- R 4.0+
+- `renv` package for dependency management
 
 ### Setup Instructions
 
 1. **Clone the repository**:
+
 Using SSH:
 ```bash
 git clone git@github.com:sjbalagit/dsci532-Individual-Assignment.git
@@ -34,40 +31,24 @@ git clone https://github.com/sjbalagit/dsci532-Individual-Assignment.git
 cd dsci532-Individual-Assignment
 ```
 
-1. **Install R packages**:
-
-Option A: Using R console
+2. **Install dependencies using renv**:
 
 ```r
-install.packages(c(
-  "shiny",
-  "ggplot2",
-  "dplyr",
-  "tidyr",
-  "plotly",
-  "bslib"
-))
+install.packages("renv")
+renv::restore()
 ```
-
-Option B: Using RStudio
-
-Open `src/app.r` in RStudio and install any missing packages when prompted.
+This will automatically install all required packages from `renv.lock`.
 
 ## Running the Application
 
 ### From Terminal
-
 ```bash
-cd dsci532-Individual-Assignment
-Rscript -e "shiny::runApp('src/app.r')"
+Rscript -e "shiny::runApp('app.R')"
 ```
 
-The app will start and typically open at `http://127.0.0.1:XXXX` (the port will be displayed in the console).
-
 ### From RStudio
-
-1. Open `src/app.r` in RStudio
-2. Click the **"Run App"** button at the top of the editor
+1. Open `app.R` in RStudio
+2. Click the **"Run App"** button
 
 ## Attribution
 
