@@ -5,9 +5,6 @@ library(tidyr)
 library(plotly)
 library(bslib)
 
-# Set working directory to project root (parent of src folder)
-setwd(dirname(getwd()))
-
 # Import dataset
 processed_data <- read.csv("data/processed/housing_with_county.csv")
 
@@ -26,7 +23,7 @@ ui <- page_fillable(
     }
   ")),
   
-  h1("California Housing Dashboard (1990)", style = "text-align: center; margin-bottom: 1.5rem;"),
+  h1("California Housing Dashboard (1990)", style = "text-align: left; margin-bottom: 1.5rem;"),
   
   layout_sidebar(
     # Sidebar inputs
@@ -79,7 +76,7 @@ ui <- page_fillable(
     "Simplified California Housing Dashboard  |  ",
     "Data from 1990  |  ",
     a("GitHub Repository",
-      href = "https://github.com/UBC-MDS/DSCI-532_2026_5_california_housing",
+      href = "https://github.com/sjbalagit/dsci532-Individual-Assignment",
       target = "_blank"),
     class = "footer"
   )
